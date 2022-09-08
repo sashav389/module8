@@ -1,15 +1,27 @@
 package Module8;
-import static Module8.GetShape.getShape;
+
+import Names.NameConstants;
+import Shape.*;
+
+
+import static Module8.GettingShape.printShape;
 
 public class Main {
     public static void main(String[] args) {
-       // створюємо різні фігури
-       Shape circle = new Circle();
-       Shape triangle = new Triangle();
-       Shape sphere = new Sphere();
-       Shape rectangle = new Rectangle();
-       Shape square = new Square();
-       // використовуємо метод getShape з окремого класу GetShape
-       System.out.println(getShape(circle) + " " + getShape(sphere) + " " + getShape(rectangle));
+       Shape circle = new Circle(NameConstants.circleName);
+       Shape sphere = new Sphere(NameConstants.sphereName);
+       Shape hexagon = new Hexagon(NameConstants.hexagonName);
+       Shape cube = new Cube(NameConstants.cubeName);
+       Shape quadrangle = new Quadrangle(NameConstants.quadrangleName);
+       Shape cone = new Cone(NameConstants.coneName);
+
+       printShape(circle);
+       printShape(sphere);
+       printShape(hexagon);
+       printShape(cube);
+       printShape(quadrangle);
+       printShape(cone);
+
+
     }
 }
